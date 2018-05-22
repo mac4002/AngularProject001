@@ -12,11 +12,13 @@ export class AppComponent {
   mimi: string;
   url: string;
   classesBtn: Object;
+  objStyle: object;
 
   constructor() {
     this.mimi = 'mimi';
     this.url = 'http://www.google.com';
     this.isEditable = true;
+
   }
   public changeStyle() {
     this.isEditable = !this.isEditable;
@@ -31,5 +33,9 @@ export class AppComponent {
     'teal' : this.isEditable,
     'orange' : !this.isEditable
   };
+  this.objStyle = {
+    'color' : this.isEditable ? 'chocolate' : 'royalblue',
+    'border-left': !this.isEditable ? '4px solid royalblue' : 'none'
+   };
   }
 }
