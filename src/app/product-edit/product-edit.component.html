@@ -1,3 +1,27 @@
-<p>
-  product-edit works!
-</p>
+
+
+<section class="container">
+<form  class="col s12">
+    <h4>Editer le Produit</h4>
+  <div class="row">
+    <div class="input-field col s6">
+      <label for="name">Name</label>
+      <input [(ngModel)]="product.name" type="text" name="name" id="name" >
+    </div>
+  </div>
+ 
+
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea [(ngModel)]="product.description" id="description" name="description" class="materialize-textarea" ></textarea>
+          <label for="description"></label>
+        </div>
+      </div>
+    </form>
+  </div>
+</form>
+</section>
+
+<pre>{{ product | json }}</pre>
