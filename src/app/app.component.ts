@@ -11,6 +11,8 @@ export class AppComponent {
   isEditable: boolean ;
   mimi: string;
   url: string;
+  classesBtn: Object;
+
   constructor() {
     this.mimi = 'mimi';
     this.url = 'http://www.google.com';
@@ -18,6 +20,16 @@ export class AppComponent {
   }
   public changeStyle() {
     this.isEditable = !this.isEditable;
+    this.updateclassesBtn();
+    this.updateclassesBtn();
+    console.log(this.classesBtn);
   }
 
+
+  private updateclassesBtn() {
+    this.classesBtn = {
+    'teal' : this.isEditable,
+    'orange' : !this.isEditable
+  };
+  }
 }
