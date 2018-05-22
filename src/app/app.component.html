@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <br><br>
+          <h1 class="header center orange-text" [style.display]="isEditable ? 'block' : 'none'">Welcome to {{ title }}!<h3 [attr.contenteditable]="isEditable">{{ mimi }}</h3></h1>
+          <div class="row center">
+            <h5 class="header col s12 light">Team Name :  <span id=teamName>{{ team }}</span> <br>Le Manchester United Football Club est un club de football anglais basé dans le district de Trafford, à proximité de la ville de Manchester, dans son stade d'Old Trafford dans le Grand Manchester. Il est fondé en 1878 sous le nom de Newton Heath.</h5>
+          </div>
+          <div class="row center">
+            <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+          </div>
+          <br><br>
+    
+        </div>
+      </div>
+    <button class="btn-large" (click)="changeStyle()">Changer le style</button><br><br>
+      <a [href]="url" id="go to google" [class.orange]="isEditable">Lien vers google</a>
+  
+</div>
+<h2> </h2>
+
+
+<table>
+  <tr>
+    <th>Player Name</th>
+    <th>Home Country</th> 
+    <th>Pix</th>
+  </tr>
+  <tr>
+    <td>Antony Martial</td>
+    <td>France</td>
+    <td><img width="150" height="220" alt="Martial" src="assets/img/anthony-martial-176856.jpg"></td>
+  </tr>
+  <tr>
+    <td>Paul Pogba</td>
+    <td>France</td>
+    <td><img width="150" height="220" alt="Paul" src="assets/img/Paul_Pogba_2017.jpg"></td>
+  </tr>
+</table>  
+
+
+<app-product-list></app-product-list>

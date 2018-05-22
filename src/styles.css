@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+/* table{
+    border: 2px;
+    margin: 5%;
+    border-radius: 10%;
+    border-color: brown;
+    
+}
+tr{
+    font-style: italic;
+    font-size: 25px;
+    
+    
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+td{
+    border-style: dotted;
+    border-radius: 10%;
+    
+    
+
+}
+p{
+    font-size: 30px;
+}
+
+ */
+
+ #teamName{
+    font-style: italic;
+    font-size: 35px;
+    color: crimson;
+ }
