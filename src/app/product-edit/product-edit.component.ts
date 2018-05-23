@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product, PRODUCT_TEST } from '../model/product';
+import { Product, PRODUCT_TEST, TAB_Products } from '../model/product';
 
 @Component({
   selector: 'app-product-edit',
@@ -7,8 +7,11 @@ import { Product, PRODUCT_TEST } from '../model/product';
   styleUrls: ['./product-edit.component.css']
 })
 export class ProductEditComponent {
-private product:  Product;
+
+  public selectedProduct: Product;
+  private product:  Product[];
   constructor() {
-    this.product = PRODUCT_TEST;
+    this.product = TAB_Products;
+    // this.selectedProduct = TAB_Products;
    }
 }

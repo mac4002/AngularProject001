@@ -1,8 +1,8 @@
 
 
-<section class="container">
+<section class="container" *ngIf="product.length">
 <form  class="col s12">
-    <h4>Editer le Produit</h4>
+  <h4>Editer le Produit</h4>
   <div class="row">
     <div class="input-field col s6">
       <label for="name">Name</label>
@@ -25,3 +25,40 @@
 </section>
 
 <pre>{{ product | json }}</pre>
+
+
+<section class="container">
+  <h2> Liste des produits</h2>
+  <ul *ngIf="true">
+    <li>Puce1</li>
+    <li>Puce2</li>
+    <li>Puce3</li>
+    <li>Puce4</li>
+    <li>Puce5</li>
+
+  </ul>
+
+  <ul class="collection with-header">
+
+      <li *ngFor="let Product of product" class="collection-item">
+        <div>
+          {{ Product.name }}
+          <a href="#!" class="secondary-content">
+            <i class="material-icons">send
+
+            </i>
+          </a>
+        </div>
+      </li>      
+    </ul>
+
+  <article *ngIf="selectedProduct; else blockNoSelection">
+    <h3>Detail du Produit</h3>
+    <p>nom, description, prix, ...</p>
+  </article>
+
+  <ng-template #blockNoSelection>
+    <p>Pas de Produit selectionne</p>
+  </ng-template>
+
+</section>
